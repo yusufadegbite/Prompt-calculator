@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Javascript calculator</title>
+    <script type="text/javascript" charset="utf-8">
+    
+    alert("Hello! Would you like to perform a calculation?")
+
+    
+        //read numbers in the program
+        const num1 = parseFloat(prompt("Enter firstNumber: "));
+        
+        //read operator
+        const operator = prompt("Enter operator (+, -, /, *)");
+        const num2 = parseFloat(prompt("Enter secondNumber: "));
+
+        let result = 0
+        //if input is NaN
+        if(isNaN(num1) || isNaN(num2)){
+            alert("Wrong Input! Refresh the page and provide data")
+        }else{
+            
+            
+            if (operator == "+") {
+                result = num1 + num2;
+            }else if(operator == "-") {
+                result = num1 - num2;
+            }else if(operator == "*") {
+                result = num1 * num2;
+            }else if(operator == "/") {
+                result = num1 / num2;
+            }
+            
+            
+            document.write(num1 + operator + num2 + "=" +result);
+        }
+        
+      
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
